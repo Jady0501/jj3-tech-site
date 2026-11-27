@@ -58,6 +58,13 @@ export const empresa = {
       foto: "/images/luiza.png",
       alt: "Foto de Luisa Sousa",
       descricao: "Responsável pela criação, organização e gerenciamento de bancos de dados do clientes."
+    },
+    {
+      nome: "Maria Oliveira",
+      cargo: "Programadora backend",
+      foto: "/images/maria.png",
+      alt: "Foto de Maria Oliveira",
+      descricao: "Responsável pelo desenvolvimento backend dos sistemas, criando funcionalidades, gerenciando bancos de dados e garantindo segurança, desempenho e eficiência das aplicações."
     }
   ]
 };
