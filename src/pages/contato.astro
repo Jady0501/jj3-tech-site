@@ -1,3 +1,4 @@
+
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
 import Cartao from '../components/Cartao.astro';
@@ -10,6 +11,13 @@ import { empresa } from '../data/empresa.js';
 >
 	<section class="secao">
 		<div class="container">
+            <div class="fachada-container">
+				<img
+					src="/images/fachadaJJ3Tech.png"
+					alt="Fachada da sede da JJ3 Tech"
+					class="imagem-fachada"
+				/>
+			</div>
 			<div class="cabecalho-secao">
 				<h1>Fale Conosco</h1>
 				<p>Deseja construir uma solução de software sob medida para o seu negócio? Entre em contato com a {empresa.nome}!</p>
@@ -32,13 +40,15 @@ import { empresa } from '../data/empresa.js';
 					<p><strong>Telefone:</strong> {empresa.contato.telefone}</p>
 				</Cartao>
 			</div>
+
 		</div>
 	</section>
 </LayoutBase>
 
 <style>
 	.cabecalho-secao {
-		margin-bottom: 3rem;
+		margin-top: 3rem;
+        margin-bottom: 3rem;
 	}
 
 	.cabecalho-secao p {
@@ -68,5 +78,33 @@ import { empresa } from '../data/empresa.js';
 
 	.grid-contato p:last-child {
 		margin-bottom: 0;
+	}
+
+	/* Fachada da JJ3 Tech */
+	.fachada-container {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.imagem-fachada {
+		width: 100%;
+		max-width: 850px;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		border: 2px solid var(--cor-secundaria);
+		border-radius: 12px;
+		box-shadow: 0 8px 25px rgba(255, 122, 0, 0.12);
+	}
+
+	@media (max-width: 600px) {
+		.fachada-container {
+			margin-top: 2rem;
+		}
+
+		.imagem-fachada {
+			border-radius: 8px;
+		}
 	}
 </style>
